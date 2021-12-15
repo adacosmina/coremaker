@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  coremaker-app-container:
+    image: coremaker-app:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/docker-app
+    ports:
+      - "8080:8080"
